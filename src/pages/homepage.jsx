@@ -1,4 +1,3 @@
-// import
 import React from "react";
 import Logo from "../components/logo";
 import Card from "../components/card";
@@ -6,11 +5,11 @@ import Para from "../components/para";
 import InputBox from "../components/inputBox";
 import RequestCard from "../components/requestCard";
 import TagLine from "../components/tagLine";
-// import sneakerImage from "../assets/imgs/sneaker-image.png";
 
+import useCurrentWindow from "../hooks/useCurrentWindow";
 
 const HomePage = () => {
-  // return statement:
+  const windowWidth = useCurrentWindow()
 
   return (
     <div>
@@ -21,8 +20,9 @@ const HomePage = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: windowWidth > 480 ? "row" : "column",
           justifyContent: "center",
+          alignItems: "center"
         }}>
 
         <Card
@@ -42,7 +42,9 @@ const HomePage = () => {
           brand="YEEZY BOOST 700"
           color="Bright Blue"
           price="0.25 ETH"
-          textcolor="black"/>
+          textcolor="black"
+          image="./assets/imgs/shoe2.png"/>
+
 
         <Card
           id="#00003"
@@ -51,7 +53,8 @@ const HomePage = () => {
           brand="CROCS CLOG"
           color="Lighting McQueen"
           price="0.25 ETH"
-          textcolor="black"/>
+          textcolor="black"
+          image="./assets/imgs/shoe3.png"/>
 
         <Card
           id="#00004"
@@ -60,14 +63,16 @@ const HomePage = () => {
           brand="NIKE OFFLINE"
           color="Black Menta"
           price="0.25 ETH"
-          textcolor="white"/>
+          textcolor="white"
+          image="./assets/imgs/shoe4.png"/>
         </div>
 
         <div  
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: windowWidth > 480 ? "row" : "column",
           justifyContent: "center",
+          alignItems: "center"
         }}>
 
         <RequestCard/>
@@ -79,7 +84,8 @@ const HomePage = () => {
           brand="NIKE AIR MAX"
           color="90s"
           price="0.25 ETH"
-          textcolor="black"/>
+          textcolor="black"
+          image="./assets/imgs/shoe5.png"/>
 
         <Card
           id="#00007"
@@ -88,7 +94,8 @@ const HomePage = () => {
           brand="REEBOK CLASIC"
           color="Hrmony Green"
           price="0.25 ETH"
-          textcolor="white"/>
+          textcolor="white"
+          image="./assets/imgs/shoe6.png"/>
 
         <Card
           id="#00008"
@@ -97,14 +104,16 @@ const HomePage = () => {
           brand="GUCCI ACE"
           color="Leather"
           price="0.25 ETH"
-          textcolor="white"/>
+          textcolor="white"
+          image="./assets/imgs/shoe7.png"/>
         </div>
 
         <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: windowWidth > 480 ? "row" : "column",
           justifyContent: "center",
+          alignItems: "center"
         }}>
 
         <Card
@@ -114,7 +123,8 @@ const HomePage = () => {
           brand="NIKE JORDAN 1"
           color="Cloud"
           price="0.25 ETH"
-          textcolor="black"/>
+          textcolor="black"
+          image="./assets/imgs/shoe8.png"/>
 
         <Card
           id="#00010"
@@ -123,7 +133,8 @@ const HomePage = () => {
           brand="YEEZY BOOST 700"
           color="Brown"
           price="0.25 ETH"
-          textcolor="white"/>
+          textcolor="white"
+          image="./assets/imgs/shoe9.png"/>
 
         <Card
           id="#000011"
@@ -132,7 +143,8 @@ const HomePage = () => {
           brand="GUCCI ACE"
           color="Smoke"
           price="0.25 ETH"
-          textcolor="white"/>
+          textcolor="white"
+          image="./assets/imgs/shoe10.png"/>
 
         <Card
           id="#00012"
@@ -141,7 +153,8 @@ const HomePage = () => {
           brand="REEBOK CLASIC"
           color="Bright Blue"
           price="0.25 ETH"
-          textcolor="black"/>
+          textcolor="black"
+          image="./assets/imgs/shoe11.png"/>
         </div>
     </div>
   );
